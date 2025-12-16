@@ -10,12 +10,17 @@ body {
 /* Header & Navigation */
 .navbar {
     padding: 1rem 0;
-    transition: background-color 0.4s ease;
-    background-color: rgba(33, 37, 41, 0.95) !important;
+    background-color: #212529 !important;
     z-index: 1050;
 }
-.navbar.scrolled {
-    background-color: #212529 !important;
+.navbar-brand {
+    color: #fff !important;
+}
+.nav-link {
+    color: #fff !important;
+}
+.nav-link:hover {
+    color: #007bff !important;
 }
 .navbar-brand {
     font-weight: 700;
@@ -32,6 +37,8 @@ body {
     height: 90vh;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    background-color: #333;
     display: flex;
     align-items: center;
     justify-content: center;
