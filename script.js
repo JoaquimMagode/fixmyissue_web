@@ -96,33 +96,19 @@ document.addEventListener('DOMContentLoaded', function() {
             const address = formData.get('address');
             const description = formData.get('description');
             
-            // Send email
-            fetch('send_email.php', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.text())
-            .then(result => {
-                if (result === 'success') {
-                    alert('Request sent successfully! We will contact you soon.');
-                } else {
-                    alert('Email sending failed, but WhatsApp will still open.');
-                }
-            })
-            .catch(() => {
-                alert('Email sending failed, but WhatsApp will still open.');
-            });
-            
-            // Create WhatsApp message
+            // Create WhatsApp message with email info
             const message = `Hi! I would like to request a service appointment:\n\n` +
                           `Name: ${name}\n` +
                           `Phone: ${phone}\n` +
                           `Service: ${service}\n` +
                           `Address: ${address}\n` +
-                          `Problem: ${description}`;
+                          `Problem: ${description}\n\n` +
+                          `Please also send confirmation to: joaquimcesarmagode@gmail.com`;
             
             const whatsappUrl = `https://wa.me/918980192607?text=${encodeURIComponent(message)}`;
             window.open(whatsappUrl, '_blank');
+            
+            alert('Request sent via WhatsApp! We will contact you soon.');
         });
     }
 });
