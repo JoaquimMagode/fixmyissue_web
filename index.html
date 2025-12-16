@@ -43,7 +43,7 @@
     <header id="home" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+                <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1551808525-51a94da548ce?q=80&w=2070&auto=format&fit=crop');">
                     <div class="container text-center">
                         <h1 class="display-4 fw-bold">Complete System Formatting</h1>
                         <p class="lead">Revitalize your PC or MacBook with a fresh OS installation.</p>
@@ -52,7 +52,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1569705469398-e04d7a39732f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+                <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=2126&auto=format&fit=crop');">
                     <div class="container text-center">
                         <h1 class="display-4 fw-bold">Advanced Virus & Malware Removal</h1>
                         <p class="lead">Secure your data and restore your system's performance.</p>
@@ -61,7 +61,16 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1591011316492-2212b67d9129?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+                <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2020&auto=format&fit=crop');">
+                    <div class="container text-center">
+                        <h1 class="display-4 fw-bold">Hardware Repair & Maintenance</h1>
+                        <p class="lead">Professional repair for broken screens, keyboards, and other hardware issues.</p>
+                        <a href="#booking-form" class="btn btn-primary btn-lg">Schedule a Visit</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?q=80&w=2069&auto=format&fit=crop');">
                     <div class="container text-center">
                         <h1 class="display-4 fw-bold">Essential Software Installation</h1>
                         <p class="lead">Get your necessary software, including Office suite, installed and configured.</p>
@@ -124,21 +133,53 @@
                 <div class="col-lg-8">
                     <div class="card shadow p-4 p-md-5">
                         <h2 class="card-title text-center mb-4">Request a Service Appointment</h2>
-                        <form action="#" method="POST">
-                            <div class="mb-3"><input type="text" class="form-control" placeholder="Full Name" required></div>
-                            <div class="mb-3"><input type="tel" class="form-control" placeholder="WhatsApp Number" required></div>
+                        
+             
+
+                        <form id="appointment-form">
+                            <div class="mb-3"><input type="text" class="form-control" name="name" placeholder="Full Name" required></div>
+                            <div class="mb-3"><input type="tel" class="form-control" name="phone" placeholder="WhatsApp Number" required></div>
                             <div class="mb-3">
-                                <select class="form-select" required>
+                                <select class="form-select" name="service" required>
                                     <option value="" disabled selected>Choose a service...</option>
                                     <option>Complete Formatting</option>
                                     <option>Virus Removal & Optimization</option>
                                     <option>Software Installation</option>
                                     <option>Personal IT Lessons</option>
+                                    <option>Hardware Repair</option>
                                     <option>Other Issue</option>
                                 </select>
                             </div>
-                            <div class="mb-3"><input type="text" class="form-control" placeholder="Your Full Address"></div>
-                            <div class="mb-4"><textarea class="form-control" rows="4" placeholder="Briefly describe the problem you are facing..."></textarea></div>
+                            
+                            <!-- Address with Location Picker -->
+                            <div class="mb-3">
+                                <label class="form-label">Your Full Address</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" name="address" id="address-input" placeholder="Enter your complete address" required>
+                                    <button class="btn btn-outline-secondary" type="button" id="current-location-btn">
+                                        <i class="bi bi-geo-alt-fill"></i> Use Current Location
+                                    </button>
+                                </div>
+                                <div class="form-text">We provide service in Vadodara and surrounding areas</div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <textarea class="form-control" name="description" id="problem-description" rows="4" placeholder="Briefly describe the problem you are facing..." required></textarea>
+                                       <!-- Quick Issue Buttons -->
+                        <div class="mb-4">
+                            <h6 class="text-muted mb-3">Common Issues (Click to select):</h6>
+                            <div class="d-flex flex-wrap gap-2">
+                                <button type="button" class="btn btn-outline-primary btn-sm quick-issue" data-issue="Laptop running very slow">Slow Performance</button>
+                                <button type="button" class="btn btn-outline-primary btn-sm quick-issue" data-issue="Broken LCD screen">Broken LCD</button>
+                                <button type="button" class="btn btn-outline-primary btn-sm quick-issue" data-issue="Keyboard not working properly">Keyboard Issues</button>
+                                <button type="button" class="btn btn-outline-primary btn-sm quick-issue" data-issue="Battery not charging">Battery Problems</button>
+                                <button type="button" class="btn btn-outline-primary btn-sm quick-issue" data-issue="Overheating and shutting down">Overheating</button>
+                                <button type="button" class="btn btn-outline-primary btn-sm quick-issue" data-issue="Blue screen errors">Blue Screen</button>
+                                <button type="button" class="btn btn-outline-primary btn-sm quick-issue" data-issue="WiFi connection problems">WiFi Issues</button>
+                                <button type="button" class="btn btn-outline-primary btn-sm quick-issue" data-issue="Virus or malware infection">Virus/Malware</button>
+                            </div>
+                        </div>
+                            </div>
                             <div class="d-grid"><button type="submit" class="btn btn-primary">Submit Request</button></div>
                         </form>
                     </div>
