@@ -19,6 +19,52 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Laptop image galleries
+    const laptopImages = {
+        dell: [
+            'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?q=80&w=2071&auto=format&fit=crop',
+            'https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=2070&auto=format&fit=crop',
+            'https://images.unsplash.com/photo-1484788984921-03950022c9ef?q=80&w=2070&auto=format&fit=crop',
+            'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=2026&auto=format&fit=crop'
+        ],
+        hp: [
+            'https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=2070&auto=format&fit=crop',
+            'https://images.unsplash.com/photo-1593642632823-8f785ba67e45?q=80&w=2032&auto=format&fit=crop',
+            'https://images.unsplash.com/photo-1515378791036-0648a814c963?q=80&w=2070&auto=format&fit=crop'
+        ],
+        lenovo: [
+            'https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?q=80&w=1964&auto=format&fit=crop',
+            'https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?q=80&w=2070&auto=format&fit=crop',
+            'https://images.unsplash.com/photo-1542393545-10f5cde2c810?q=80&w=2012&auto=format&fit=crop',
+            'https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?q=80&w=2070&auto=format&fit=crop',
+            'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop'
+        ]
+    };
+
+    // Handle laptop image clicks
+    document.querySelectorAll('.laptop-gallery').forEach(gallery => {
+        gallery.addEventListener('click', function() {
+            const laptopType = this.dataset.laptop;
+            const images = laptopImages[laptopType];
+            const modalCarouselInner = document.getElementById('modalCarouselInner');
+            
+            // Clear previous images
+            modalCarouselInner.innerHTML = '';
+            
+            // Add images to modal carousel
+            images.forEach((img, index) => {
+                const carouselItem = document.createElement('div');
+                carouselItem.className = `carousel-item ${index === 0 ? 'active' : ''}`;
+                carouselItem.innerHTML = `<img src="${img}" class="d-block w-100" style="max-height: 70vh; object-fit: contain;">`;
+                modalCarouselInner.appendChild(carouselItem);
+            });
+            
+            // Show modal
+            const modal = new bootstrap.Modal(document.getElementById('imageModal'));
+            modal.show();
+        });
+    });
+
     // Change navbar background on scroll
     var navbar = document.querySelector('.navbar');
     if (navbar) {
