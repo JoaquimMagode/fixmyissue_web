@@ -9,6 +9,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Activate Amazon ads carousel
+    var adsCarousel = document.querySelector('#amazonAdsCarousel');
+    if (adsCarousel) {
+        var adsCarouselInstance = new bootstrap.Carousel(adsCarousel, {
+            interval: 4000,
+            wrap: true,
+            pause: 'hover'
+        });
+    }
+
     // Change navbar background on scroll
     var navbar = document.querySelector('.navbar');
     if (navbar) {
