@@ -1,0 +1,156 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fix My Issue - Specialized PC &amp; MacBook Technician (Vadodara)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <style>
+        /* Custom Styles for Hero Section */
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('YOUR_BACKGROUND_IMAGE_URL.jpg') no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        .service-icon {
+            font-size: 3rem;
+            color: #0d6efd; /* Bootstrap Primary color */
+        }
+        .contact-details a {
+            color: #ccc;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body dir="ltr" spellcheck="true" style="direction: ltr; min-height: 7px;">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-gear-wide-connected me-2"></i> Fix My Issue
+            </a>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="container">
+            <h1 class="display-3 fw-bold">💻 Is your computer slow or infected with viruses?</h1>
+            <p class="lead mb-4">I can fix it today! Specialized PC &amp; MacBook Technician – On-site Service (Vadodara)</p>
+            <a href="#booking-form" class="btn btn-primary btn-lg">Book Same-Day Service</a>
+        </div>
+    </header>
+
+    <section class="container py-5 text-center">
+        <h2 class="mb-5 text-primary">🚀 What I do for you:</h2>
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            
+            <div class="col">
+                <i class="bi bi-cpu service-icon mb-3"></i>
+                <h5 class="fw-bold">Complete Formatting</h5>
+                <p class="text-muted">(Windows / macOS) – Make it like new!</p>
+            </div>
+            
+            <div class="col">
+                <i class="bi bi-speedometer2 service-icon mb-3"></i>
+                <h5 class="fw-bold">Virus Removal &amp; Speed ​​Optimization</h5>
+                <p class="text-muted">Clean out malware and boost performance.</p>
+            </div>
+            
+            <div class="col">
+                <i class="bi bi-pc-display service-icon mb-3"></i>
+                <h5 class="fw-bold">Software Installation</h5>
+                <p class="text-muted">Installation and Activation of Office &amp; Essential Software.</p>
+            </div>
+
+            <div class="col">
+                <i class="bi bi-person-video service-icon mb-3"></i>
+                <h5 class="fw-bold">Private Basic Computer Lessons</h5>
+                <p class="text-muted">Personalized guidance to improve your skills.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-light py-4 text-center">
+        <div class="container">
+            <div class="row row-cols-2 row-cols-md-4">
+                <div class="col py-2"><i class="bi bi-house-door-fill me-2 text-success"></i> **On-Site Service** (Home/Hostel)</div>
+                <div class="col py-2"><i class="bi bi-clock-fill me-2 text-success"></i> **Same-Day Service** (Whenever possible)</div>
+                <div class="col py-2"><i class="bi bi-person-check-fill me-2 text-success"></i> **Specialized Technician** (PC &amp; MacBook)</div>
+                <div class="col py-2"><i class="bi bi-geo-alt-fill me-2 text-success"></i> **Servicing Vadodara**</div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="container py-5" id="booking-form">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card shadow p-4">
+                    <h2 class="card-title text-center mb-4">Book Your On-Site Repair Now</h2>
+                    <form action="#" method="POST" id="mainBookingForm">
+                        
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required="">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">WhatsApp Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="+91 89801 92607" required="">
+                            <div class="form-text">We'll use this number to confirm your service via WhatsApp.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="service" class="form-label">Service Needed</label>
+                            <select class="form-select" id="service" name="service" required="">
+                                <option value="" disabled="" selected="">Select a Service</option>
+                                <option value="Formatting">Complete Formatting (Windows/macOS)</option>
+                                <option value="VirusRemoval">Virus Removal + Speed Optimization</option>
+                                <option value="SoftwareInstall">Office &amp; Software Installation</option>
+                                <option value="Lessons">Private Basic Computer Lessons</option>
+                                <option value="Other">Other (Please describe below)</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="location" class="form-label">Your Location (Home/Hostel/Office)</label>
+                            <input type="text" class="form-control" id="location" name="location" placeholder="e.g., Vadiwadi, Vadodara (Hostel)">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="description" class="form-label">Brief Description of the Issue</label>
+                            <textarea class="form-control" id="description" name="description" rows="3" required=""></textarea>
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="bi bi-calendar-check me-2"></i> Book Same-Day Service
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white-50 py-4">
+        <div class="container contact-details text-center">
+            <h5 class="text-white mb-3">Get in touch:</h5>
+            <p>
+                <i class="bi bi-whatsapp me-2"></i> **WhatsApp:** <a href="https://wa.me/918980192607" target="_blank">+91 89801 92607</a> 
+            </p>
+            <p>
+                <i class="bi bi-globe me-2"></i> **Website:** <a href="https://fixmyissue.kern-up.com" target="_blank">fixmyissue.kern-up.com</a>
+            </p>
+            <hr class="w-50 mx-auto">
+            <small>© 2025 Fix My Issue. All Rights Reserved. Service provided in Vadodara.</small>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+
+
+</body></html>
