@@ -158,8 +158,7 @@ document.addEventListener('DOMContentLoaded', function() {
                           `Phone: ${phone}\n` +
                           `Service: ${service}\n` +
                           `Address: ${address}\n` +
-                          `Problem: ${description}\n\n` +
-                          `Please also send confirmation to: joaquimcesarmagode@gmail.com`;
+                          `Problem: ${description}\n\n`;
             
             const whatsappUrl = `https://wa.me/918980192607?text=${encodeURIComponent(message)}`;
             window.open(whatsappUrl, '_blank');
